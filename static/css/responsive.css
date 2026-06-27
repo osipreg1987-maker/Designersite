@@ -41,17 +41,25 @@
   }
 
   .advantages-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-md);
   }
 
   .advantage-card__illustration {
-    height: 80px;
+    height: 70px;
+  }
+
+  .advantage-card {
+    padding: var(--space-md);
+  }
+
+  .advantage-card__title {
+    font-size: var(--text-sm);
   }
 
   .advantage-card__text {
-    font-size: var(--text-xs);
-    line-height: 1.5;
+    font-size: 0.7rem;
+    line-height: 1.4;
   }
 
   .ba-row {
@@ -231,23 +239,23 @@
   .btn { padding: 12px 24px; font-size: var(--text-xs); }
 
   .advantages-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-sm);
   }
 
   .advantage-card {
-    padding: var(--space-md);
+    padding: var(--space-sm);
   }
 
   .advantage-card__illustration {
-    height: 60px;
+    height: 50px;
   }
 
   .advantage-card__title {
-    font-size: var(--text-sm);
+    font-size: var(--text-xs);
   }
 
   .advantage-card__text {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 }
