@@ -240,7 +240,10 @@ function initPortfolioCarousel() {
   });
 
   // Infinite Scroll Logic
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
   const startAutoScroll = () => {
+    if (isTouchDevice) return; // No auto-scroll on mobile
     if (autoScrollAnimation) cancelAnimationFrame(autoScrollAnimation);
     exactScrollLeft = wrapper.scrollLeft;
     
