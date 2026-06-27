@@ -193,17 +193,17 @@
   }
 
   .hero__title {
-    font-size: clamp(1.5rem, 1rem + 2.5vw, 2rem);
+    font-size: clamp(1.3rem, 0.9rem + 2vw, 1.8rem);
   }
 
   .hero__subtitle {
-    font-size: var(--text-sm);
-    margin-bottom: var(--space-lg);
+    font-size: var(--text-xs);
+    margin-bottom: var(--space-md);
     max-width: 100%;
   }
 
   .hero__badge {
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-sm);
   }
 
   .hero__actions { flex-direction: row; flex-wrap: wrap; gap: var(--space-sm); }
@@ -218,8 +218,8 @@
   }
 
   .hero__stats .stat { text-align: center; }
-  .hero__stats .stat__number { font-size: var(--text-xl); }
-  .hero__stats .stat__label { font-size: var(--text-xs); }
+  .hero__stats .stat__number { font-size: var(--text-lg); }
+  .hero__stats .stat__label { font-size: 0.65rem; }
 
   .footer__inner {
     flex-direction: column;
@@ -257,5 +257,53 @@
 
   .advantage-card__text {
     font-size: 0.6rem;
+  }
+
+  .tariffs-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .tariff-card {
+    padding: var(--space-sm);
+  }
+
+  .tariff-card__title {
+    font-size: var(--text-base);
+  }
+
+  .tariff-card__price {
+    font-size: var(--text-lg);
+  }
+
+  .tariff-card__features {
+    font-size: 0.6rem;
+  }
+
+  .tariff-card__features li {
+    padding-left: 16px;
+  }
+
+  .tariff-card__features li::before {
+    width: 6px;
+    height: 6px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .testimonial-card {
+    padding: var(--space-sm);
+  }
+
+  .testimonial-card__text {
+    font-size: 0.6rem;
+  }
+
+  .upsells-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
   }
 }

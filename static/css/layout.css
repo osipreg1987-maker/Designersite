@@ -1124,10 +1124,18 @@
 
 @media (max-width: 640px) {
   .process-step {
-    flex: 0 0 100%;
+    flex: 0 0 calc(33.33% - var(--space-md));
   }
   .process-step__card {
-    max-width: 320px;
+    max-width: 100%;
+    height: 180px;
+    padding: 24px 16px;
+  }
+  .process-step__title {
+    font-size: var(--text-sm);
+  }
+  .process-step__text {
+    font-size: 0.65rem;
   }
 }
 
