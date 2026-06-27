@@ -23,14 +23,28 @@
     position: fixed;
     top: var(--nav-height);
     left: 0; right: 0; bottom: 0;
-    background: rgba(12, 18, 32, 0.97);
-    backdrop-filter: blur(16px);
-    padding: var(--space-2xl);
+    background: rgba(10, 14, 26, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: var(--space-3xl) var(--space-2xl);
     gap: var(--space-xl);
-    z-index: var(--z-nav);
+    z-index: var(--z-overlay);
     align-items: center;
+    justify-content: center;
+    animation: menuFadeIn 0.3s ease;
   }
-  .nav__link { font-size: var(--text-lg); }
+
+  @keyframes menuFadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .nav__link {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--color-text-on-dark);
+    padding: var(--space-sm) 0;
+  }
 
   .grid--2, .grid--3, .grid--2-1, .tariffs-grid, .cta__grid {
     grid-template-columns: repeat(3, 1fr);
