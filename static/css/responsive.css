@@ -33,11 +33,11 @@
   .nav__link { font-size: var(--text-lg); }
 
   .grid--2, .grid--3, .grid--2-1, .tariffs-grid, .cta__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .testimonials-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .advantages-grid {
@@ -89,7 +89,7 @@
   }
 
   .upsells-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-md);
   }
 
