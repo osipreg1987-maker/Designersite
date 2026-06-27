@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artem Osipov — Cyber-Conversion | Инфографика для маркетплейсов</title>
+  <meta name="description" content="Премиальная инфографика и 3D-визуализация для Wildberries, Ozon и других маркетплейсов. Дизайн, который конвертирует.">
+  <meta name="theme-color" content="#0C1220">
+
+  <!-- OpenGraph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://osipov-design.ru/">
+  <meta property="og:title" content="Artem Osipov — Cyber-Conversion | Инфографика для маркетплейсов">
+  <meta property="og:description" content="Премиальная инфографика и 3D-визуализация для Wildberries, Ozon. Дизайн, который конвертирует и поднимает продажи.">
+  <meta property="og:image" content="https://osipov-design.ru/static/images/bento-ai.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://osipov-design.ru/">
+  <meta name="twitter:title" content="Artem Osipov — Cyber-Conversion | Инфографика для маркетплейсов">
+  <meta name="twitter:description" content="Премиальная инфографика и 3D-визуализация для Wildberries, Ozon. Дизайн, который конвертирует и поднимает продажи.">
+  <meta name="twitter:image" content="https://osipov-design.ru/static/images/bento-ai.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Artem Osipov — Cyber-Conversion",
+    "description": "Премиальная инфографика и 3D-визуализация для Wildberries, Ozon и других маркетплейсов",
+    "url": "https://osipov-design.ru",
+    "image": "https://osipov-design.ru/static/images/bento-ai.png",
+    "priceRange": "₽₽",
+    "areaServed": "RU",
+    "knowsAbout": ["Инфографика для маркетплейсов", "3D визуализация", "Дизайн карточек Wildberries", "Дизайн карточек Ozon", "AI дизайн"],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "150"
+    }
+  }
+  </script>
+
+  <!-- Fonts: Unbounded (display) + Plus Jakarta Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Unbounded:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="static/css/tokens.css">
+  <link rel="stylesheet" href="static/css/base.css">
+  <link rel="stylesheet" href="static/css/components.css">
+  <link rel="stylesheet" href="static/css/layout.css">
+  <link rel="stylesheet" href="static/css/animations.css">
+  <link rel="stylesheet" href="static/css/responsive.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__spinner"></div>
+      <span class="preloader__text">ARTEM <span class="accent">OSIPOV</span></span>
+    </div>
+  </div>
+
+  <!-- Brand bar -->
+  <div class="header-bar" aria-hidden="true"></div>
+
+  <!-- Subtle scan line -->
+  <div class="scan-line" aria-hidden="true"></div>
+
+  <!-- ═══════════ NAVIGATION ═══════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">ARTEM <span class="accent">OSIPOV</span></a>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about" class="nav__link">О себе</a></li>
+        <li><a href="#portfolio" class="nav__link">Портфолио</a></li>
+        <li><a href="#services" class="nav__link">Услуги</a></li>
+        <li><a href="#process" class="nav__link">Процесс</a></li>
+        <li><a href="#contact" class="nav__link">Контакт</a></li>
+      </ul>
+
+      <div class="nav__hamburger" id="hamburger" role="button" aria-label="Меню" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <video id="introVideo" autoplay muted playsinline class="hero__video-bg" style="z-index: 1; transition: opacity 0.5s ease; opacity: 0.5;">
+        <source src="static/video/01.mp4" type="video/mp4">
+      </video>
+      <video id="loopVideo" muted playsinline loop class="hero__video-bg" style="z-index: 0; opacity: 0; transition: opacity 0.5s ease;">
+        <source src="static/video/02.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="container">
+      <div class="hero__inner">
+        
+        <!-- Left Content -->
+        <div class="hero__content glass-panel">
+          <div class="hero__badge reveal-once" style="--delay: 0.1s;">
+            <span class="badge badge--teal">⚡ Cyber-Conversion Designer</span>
+          </div>
+
+          <h1 class="hero__title reveal-once" style="--delay: 0.3s;">
+            <span class="text-muted-heading">Дизайн, который</span><br>
+            <span class="text-teal">конвертирует</span>
+          </h1>
+
+          <p class="hero__subtitle reveal-once" style="--delay: 0.5s;">
+            Премиальная инфографика и 3D-визуализация для маркетплейсов.
+            Ваш товар — в центре внимания покупателя.
+          </p>
+
+          <div class="hero__actions reveal-once" style="--delay: 0.7s;">
+            <a href="#contact" class="btn btn-primary">Обсудить проект</a>
+            <a href="#portfolio" class="btn btn-secondary">Смотреть работы</a>
+          </div>
+
+          <div class="hero__stats reveal-once" style="--delay: 0.9s;">
+            <div class="stat">
+              <div class="stat__number" data-count="150" data-suffix="+">0</div>
+              <div class="stat__label">Проектов</div>
+            </div>
+            <div class="stat">
+              <div class="stat__number" data-count="98" data-suffix="%">0</div>
+              <div class="stat__label">Довольных клиентов</div>
+            </div>
+            <div class="stat">
+              <div class="stat__number" data-count="3" data-suffix=" года">0</div>
+              <div class="stat__label">Опыта</div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ═══════════ ABOUT / ADVANTAGES ═══════════ -->
+  <section class="section" id="about" style="background: var(--color-bg-section);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__label">Почему я</span>
+        <h2 class="section-header__title">
+          <span class="text-muted-heading">Превращаю товары в</span>
+          <span class="gradient-text">бестселлеры</span>
+        </h2>
+        <p class="section-header__subtitle">
+          Каждая карточка — это продуманная система визуальной конверсии
+        </p>
+      </div>
+
+      <div class="advantages-grid">
+        <!-- Advantage 1 -->
+        <div class="advantage-card glow-hover tilt-hover reveal reveal-delay-1">
+          <div class="advantage-card__illustration">
+            <img src="static/img/advantage-analytics.png" alt="" loading="lazy">
+          </div>
+          <div class="advantage-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 4 4-10"/></svg>
+          </div>
+          <h3 class="advantage-card__title">Аналитика перед дизайном</h3>
+          <p class="advantage-card__text">Изучаю конкурентов, тренды ниши и поведение покупателя. Каждое решение — обосновано данными, а не вкусовщиной.</p>
+        </div>
+
+        <!-- Advantage 2 -->
+        <div class="advantage-card glow-hover tilt-hover reveal reveal-delay-2">
+          <div class="advantage-card__illustration">
+            <img src="static/img/advantage-speed.png" alt="" loading="lazy">
+          </div>
+          <div class="advantage-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="advantage-card__title">Скорость без потери качества</h3>
+          <p class="advantage-card__text">Полный комплект инфографики за 3-5 дней. Обложка — за 1-2 дня. Без затяжных согласований и пустых обещаний.</p>
+        </div>
+
+        <!-- Advantage 3 -->
+        <div class="advantage-card glow-hover tilt-hover reveal reveal-delay-3">
+          <div class="advantage-card__illustration">
+            <img src="static/img/advantage-ai.png" alt="" loading="lazy">
+          </div>
+          <div class="advantage-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="advantage-card__title">AI + ручное мастерство</h3>
+          <p class="advantage-card__text">Нейросети для генерации и ретуши, ручная доработка для идеала. Результат неотличим от студийной съёмки.</p>
+        </div>
+
+        <!-- Advantage 4 -->
+        <div class="advantage-card glow-hover tilt-hover reveal reveal-delay-4">
+          <div class="advantage-card__illustration">
+            <img src="static/img/advantage-guarantee.png" alt="" loading="lazy">
+          </div>
+          <div class="advantage-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="advantage-card__title">Доверие селлеров</h3>
+          <p class="advantage-card__text">Сотни селлеров доверили мне свои товары. Каждый проект — это репутация, поэтому отношусь к чужому бизнесу как к своему.</p>
+        </div>
+
+        <!-- Advantage 5 -->
+        <div class="advantage-card glow-hover tilt-hover reveal reveal-delay-5">
+          <div class="advantage-card__illustration">
+            <img src="static/img/advantage-individual.png" alt="" loading="lazy">
+          </div>
+          <div class="advantage-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="advantage-card__title">Индивидуальный подход</h3>
+          <p class="advantage-card__text">Не шаблоны, а уникальный дизайн под ваш продукт. Изучаю вашу категорию и создают карточку, которая выделяется в выдаче.</p>
+        </div>
+
+        <!-- Advantage 6 -->
+        <div class="advantage-card glow-hover tilt-hover reveal reveal-delay-6">
+          <div class="advantage-card__illustration">
+            <img src="static/img/advantage-transparent.png" alt="" loading="lazy">
+          </div>
+          <div class="advantage-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <h3 class="advantage-card__title">Прозрачная работа</h3>
+          <p class="advantage-card__text">Чёткий бриф, фиксированная стоимость, сроки без сюрпризов. Всегда на связи в Telegram — отвечаю в течение часа.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PORTFOLIO ═══════════ -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__label">Работы</span>
+        <h2 class="section-header__title">
+          <span class="gradient-text--iridescent">Портфолио</span>
+        </h2>
+        <p class="section-header__subtitle">Проекты, которые приносят реальный результат</p>
+      </div>
+
+      <div class="portfolio-carousel-wrapper reveal reveal--stagger-children">
+        <div class="portfolio-carousel" id="portfolioCarousel">
+          <!-- Set 1 -->
+          <div class="portfolio-slide" data-case="case1">
+            <img src="static/images/keis1/1.png" alt="Электроника" class="portfolio-slide__img" loading="lazy">
+            <div class="portfolio-slide__info">
+              <h3>Wildberries — Электроника</h3>
+              <p>CTR вырос на 95%</p>
+            </div>
+          </div>
+          <div class="portfolio-slide" data-case="case2">
+            <img src="static/images/Keis2/1.png" alt="Инструменты" class="portfolio-slide__img" loading="lazy">
+            <div class="portfolio-slide__info">
+              <h3>Wildberries — Инструменты</h3>
+              <p>Снижение цены клика на 32%</p>
+            </div>
+          </div>
+          <div class="portfolio-slide" data-case="case3">
+            <img src="static/images/keis3/1.png" alt="Продукты" class="portfolio-slide__img" loading="lazy">
+            <div class="portfolio-slide__info">
+              <h3>Wildberries — Продукты</h3>
+              <p>Конверсия в заказ 14%</p>
+            </div>
+          </div>
+          <div class="portfolio-slide" data-case="case8">
+            <img src="static/images/keis8/1.png" alt="А/Б Тест" class="portfolio-slide__img" loading="lazy">
+            <div class="portfolio-slide__info">
+              <h3>Ozon — А/Б Тестирование</h3>
+              <p>Мясорубка: рост CTR на 40%</p>
+            </div>
+          </div>
+          <div class="portfolio-slide" data-case="case4">
+            <img src="static/images/Keis4/1.png" alt="Гейминг" class="portfolio-slide__img" loading="lazy">
+            <div class="portfolio-slide__info">
+              <h3>Wildberries — Гейминг</h3>
+              <p>Окупаемость рекламы 350%</p>
+            </div>
+          </div>
+          <div class="portfolio-slide" data-case="case5">
+            <img src="static/images/Keis5/1.png" alt="Бытовая техника" class="portfolio-slide__img" loading="lazy">
+            <div class="portfolio-slide__info">
+              <h3>Ozon — Бытовая техника</h3>
+              <p>Вывод в ТОП-3 за 14 дней</p>
+            </div>
+          </div>
+          <div class="portfolio-slide" data-case="case6">
+            <img src="static/images/Keis6/1.png" alt="Климатическая техника" class="portfolio-slide__img" loading="lazy">
+            <div class="portfolio-slide__info">
+              <h3>Ozon — Климатическая техника</h3>
+              <p>Увеличение заказов на 60%</p>
+            </div>
+          </div>
+          <div class="portfolio-slide" data-case="case7">
+            <img src="static/images/Keis7/1.png" alt="Зоотовары" class="portfolio-slide__img" loading="lazy">
+            <div class="portfolio-slide__info">
+              <h3>Wildberries — Зоотовары</h3>
+              <p>Снижение стоимости клика на 45%</p>
+            </div>
+          </div>
+          <div class="portfolio-slide" data-case="case9">
+            <img src="static/images/Keis9/1.png" alt="Смарт-очки" class="portfolio-slide__img" loading="lazy">
+            <div class="portfolio-slide__info">
+              <h3>Ozon — А/Б Тестирование</h3>
+              <p>Смарт-очки: рост CTR на 55%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PROCESS ═══════════ -->
+  <section class="section process-section" id="process">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__label">Процесс</span>
+        <h2 class="section-header__title">
+          <span class="text-muted-heading">Этапы</span>
+          <span class="gradient-text">работы</span>
+        </h2>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-timeline__line" aria-hidden="true"></div>
+        <div class="process-timeline__line process-timeline__line--fill" aria-hidden="true"></div>
+
+        <div class="process-step reveal" style="--accent: var(--color-teal);">
+          <div class="process-step__dot">
+            <span class="process-step__num">01</span>
+          </div>
+          <div class="process-step__card glow-hover">
+            <div class="process-step__watermark">01</div>
+            <h3 class="process-step__title">Обсуждение проекта</h3>
+            <p class="process-step__text">Заполнение детального брифа и обсуждение всех нюансов: сроки, форматы и точная стоимость.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal reveal-delay-1" style="--accent: #CCFF00;">
+          <div class="process-step__dot">
+            <span class="process-step__num">02</span>
+          </div>
+          <div class="process-step__card glow-hover">
+            <div class="process-step__watermark">02</div>
+            <h3 class="process-step__title">Предоплата проекта</h3>
+            <p class="process-step__text">Внесение предоплаты 50% или 100% удобным для вас способом.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal reveal-delay-2" style="--accent: #818cf8;">
+          <div class="process-step__dot">
+            <span class="process-step__num">03</span>
+          </div>
+          <div class="process-step__card glow-hover">
+            <div class="process-step__watermark">03</div>
+            <h3 class="process-step__title">Разработка дизайна</h3>
+            <p class="process-step__text">Создание обложки, затем разработка остальных слайдов в едином стиле.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal reveal-delay-3" style="--accent: #fb7185;">
+          <div class="process-step__dot">
+            <span class="process-step__num">04</span>
+          </div>
+          <div class="process-step__card glow-hover">
+            <div class="process-step__watermark">04</div>
+            <h3 class="process-step__title">Внесение правок</h3>
+            <p class="process-step__text">2 круга правок бесплатно. Корректировки одним сообщением.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal reveal-delay-4" style="--accent: #a855f7;">
+          <div class="process-step__dot">
+            <span class="process-step__num">05</span>
+          </div>
+          <div class="process-step__card glow-hover">
+            <div class="process-step__watermark">05</div>
+            <h3 class="process-step__title">Завершение проекта</h3>
+            <p class="process-step__text">Финальное согласование и отправка готовых материалов без водяных знаков.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SERVICES / TARIFFS ═══════════ -->
+  <section class="section" id="services" style="background: var(--color-bg-section);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__label">Цены и Тарифы</span>
+        <h2 class="section-header__title">
+          <span class="text-muted-heading">Готовые пакеты</span>
+          <span class="gradient-text">под ключ</span>
+        </h2>
+        <p class="section-header__subtitle">Выберите идеальный формат упаковки вашего продукта для кратного роста продаж</p>
+      </div>
+
+      <div class="tariffs-grid">
+        <!-- Тариф 1: Обложка -->
+        <div class="tariff-card glow-hover tilt-hover reveal reveal-delay-1">
+          <div class="tariff-card__header">
+            <span class="tariff-card__subtitle">[ ОБЛОЖКА ]</span>
+            <h3 class="tariff-card__title">1 <span class="tariff-card__title-unit">слайд</span></h3>
+            <p class="tariff-card__title-desc">обложка</p>
+            <div class="tariff-card__price-wrapper">
+              <span class="tariff-card__price">1 800 ₽</span>
+            </div>
+          </div>
+          <ul class="tariff-card__features">
+            <li>Анализ выдачи и конкурентов</li>
+            <li><strong class="text-teal">⚡ Нейрофотосессия товара (AI)</strong> <span class="badge-ai-inline">Включено</span></li>
+            <li>Цветокоррекция и ретушь</li>
+            <li>Примерка слайда к выдаче</li>
+            <li>2 круга правок бесплатно</li>
+            <li class="tariff-card__delivery-time">1–2 дня</li>
+          </ul>
+          <a href="#contact" class="btn btn-secondary tariff-card__btn">Выбрать</a>
+        </div>
+
+        <!-- Тариф 2: Стандарт (HIT) -->
+        <div class="tariff-card tariff-card--hit glow-hover tilt-hover reveal reveal-delay-2">
+          <span class="tariff-card__badge">HIT</span>
+          <div class="tariff-card__header">
+            <span class="tariff-card__subtitle">[ СТАНДАРТ ]</span>
+            <h3 class="tariff-card__title">5 <span class="tariff-card__title-unit">слайдов</span></h3>
+            <p class="tariff-card__title-desc">обложка + 4 слайда</p>
+            <div class="tariff-card__price-wrapper">
+              <span class="tariff-card__price-old">5 800 ₽</span>
+              <span class="tariff-card__price">5 000 ₽</span>
+            </div>
+          </div>
+          <ul class="tariff-card__features">
+            <li>Анализ выдачи и конкурентов</li>
+            <li><strong class="text-neon-lime">⚡ Нейрофотосессия товара (AI)</strong> <span class="badge-ai-inline">Включено</span></li>
+            <li>Цветокоррекция и ретушь</li>
+            <li>Примерка слайда к выдаче</li>
+            <li>2 круга правок бесплатно</li>
+            <li class="tariff-card__delivery-time">2–3 дня</li>
+          </ul>
+          <a href="#contact" class="btn btn-teal tariff-card__btn">Заказать</a>
+        </div>
+
+        <!-- Тариф 3: Премиум -->
+        <div class="tariff-card tariff-card--premium glow-hover tilt-hover reveal reveal-delay-3">
+          <div class="tariff-card__header">
+            <span class="tariff-card__subtitle">[ ПРЕМИУМ ]</span>
+            <h3 class="tariff-card__title">7 <span class="tariff-card__title-unit">слайдов</span></h3>
+            <p class="tariff-card__title-desc">обложка + 6 слайдов</p>
+            <div class="tariff-card__price-wrapper">
+              <span class="tariff-card__price-old">7 800 ₽</span>
+              <span class="tariff-card__price">6 900 ₽</span>
+            </div>
+          </div>
+          <ul class="tariff-card__features">
+            <li>Анализ выдачи и конкурентов</li>
+            <li><strong class="text-coral">⚡ Нейрофотосессия товара (AI)</strong> <span class="badge-ai-inline">Включено</span></li>
+            <li>Цветокоррекция и ретушь</li>
+            <li>Примерка слайда к выдаче</li>
+            <li>2 круга правок бесплатно</li>
+            <li class="tariff-card__delivery-time">4–5 дней</li>
+          </ul>
+          <a href="#contact" class="btn btn-secondary tariff-card__btn">Выбрать</a>
+        </div>
+      </div>
+
+      <div class="upsells-grid reveal">
+        <div class="upsell-card glow-hover">
+          <span class="upsell-card__badge">тест CTR</span>
+          <ul class="upsell-card__list">
+            <li>3 варианта обложки</li>
+            <li>1 500 ₽ за обложку вместо 1 800 ₽</li>
+          </ul>
+          <span class="upsell-card__price">4 500 ₽</span>
+        </div>
+        <div class="upsell-card glow-hover">
+          <span class="upsell-card__badge">нейрофотосессия</span>
+          <ul class="upsell-card__list">
+            <li>10 фото товара</li>
+            <li>Для карточки WB / Ozon</li>
+          </ul>
+          <span class="upsell-card__price">5 000 ₽</span>
+        </div>
+        <div class="upsell-card glow-hover">
+          <span class="upsell-card__badge">доп. слайд</span>
+          <ul class="upsell-card__list">
+            <li>Дополнительный инфослайд</li>
+            <li>В едином стиле проекта</li>
+          </ul>
+          <span class="upsell-card__price">1 000 ₽</span>
+        </div>
+        <div class="upsell-card glow-hover">
+          <span class="upsell-card__badge">rich-контент</span>
+          <ul class="upsell-card__list">
+            <li>1 блок Rich-контента</li>
+            <li>Для карточки WB / Ozon</li>
+          </ul>
+          <span class="upsell-card__price">1 200 ₽</span>
+        </div>
+        <div class="upsell-card glow-hover">
+          <span class="upsell-card__badge">исходники</span>
+          <ul class="upsell-card__list">
+            <li>PSD-файл по артикулу</li>
+            <li>Главный слайд или весь проект</li>
+          </ul>
+          <span class="upsell-card__price">3 000 ₽</span>
+        </div>
+        <div class="upsell-card glow-hover">
+          <span class="upsell-card__badge">замена товара</span>
+          <ul class="upsell-card__list">
+            <li>Замена в готовом слайде</li>
+            <li>Цвет, вкус, артикул</li>
+          </ul>
+          <span class="upsell-card__price">50% от тарифа</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TESTIMONIALS ═══════════ -->
+  <section class="section" id="testimonials" style="background: var(--color-bg-section);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__label">Отзывы</span>
+        <h2 class="section-header__title">
+          <span class="text-muted-heading">Что говорят</span>
+          <span class="gradient-text">клиенты</span>
+        </h2>
+        <p class="section-header__subtitle">Реальные результаты реальных людей</p>
+      </div>
+
+      <div class="testimonials-grid reveal">
+        <div class="testimonial-card glow-hover tilt-hover">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">«Качество инфографики выше всех моих пожеланий. Быстро нашли общий язык, создали слайд без перегрузки деталями. Сделано в лучшем виде, самые наилучшие рекомендации!»</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">ЕК</div>
+            <div>
+              <strong>Екатерина</strong>
+              <span>Wildberries — Менеджер</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card glow-hover tilt-hover">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">«Артём промониторил конкурентов, проанализировал на чём можно выиграть. Качество инфографики на высочайшем уровне. Быстро нашли общий язык, все сделано в лучшем виде!»</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">ДМ</div>
+            <div>
+              <strong>Дмитрий М.</strong>
+              <span>Wildberries — Товары для дома</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card glow-hover tilt-hover">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">«Весь комплект слайдов сделан в едином стиле, карточка стала выглядеть солиднее. Артём вникает в продукт, а не просто делает шаблон. Рекомендую!»</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">АС</div>
+            <div>
+              <strong>Андрей С.</strong>
+              <span>Ozon — Спортивные товары</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FAQ ═══════════ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__label">Вопросы</span>
+        <h2 class="section-header__title">
+          <span class="text-muted-heading">Часто задаваемые</span>
+          <span class="gradient-text">вопросы</span>
+        </h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item glow-hover">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Сколько времени занимает создание инфографики?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Полный комплект из 5 слайдов — 2-3 рабочих дня. Обложка — 1-2 дня. Премиум-пакет из 7 слайдов — 4-5 дней. Сроки согласовываются перед началом работы.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glow-hover">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Что такое нейрофотосессия (AI)?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Это генерация фотореалистичных изображений вашего товара с помощью нейросетей. Если у вас нет студийных фото — я создам их искусственно. Результат неотличим от настоящей фотографии.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glow-hover">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Сколько правок входит в тариф?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>В каждый тариф входят 2 круга правок бесплатно. Важно: все корректировки отправляются одним сообщением, чтобы не затягивать процесс.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glow-hover">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Работаете ли вы с товарами из любой категории?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Да, я работаю с любыми категориями товаров: электроника, инструменты, одежда, продукты питания, зоотовары, бытовая техника и другие. Каждый проект уникален.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glow-hover">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Как происходит оплата?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Предоплата 50% или 100% — на ваш выбор. Оплата через ТБанк, Сбербанк или другие удобные способы. Остаток — после финального согласования.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glow-hover">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Что такое экспресс-аудит CTR?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Бесплатный разбор вашей карточки товара: анализ УТП, конкурентов и визуальной воронки. Вы получаете конкретный план действий для роста кликабельности. Результат в Telegram в течение 2 часов.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CTA (CTR AUDIT) ═══════════ -->
+  <section class="section cta-section" id="contact">
+    <div class="cta-section__glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="cta-section__inner reveal">
+
+        <!-- Top: headline -->
+        <div class="cta-section__header">
+          <span class="cta__label">Бесплатный разбор</span>
+          <h2 class="cta-section__title">
+            <span class="text-teal">Экспресс-аудит</span>
+            <span class="text-muted-heading">CTR вашей карточки</span>
+          </h2>
+          <p class="cta-section__subtitle">
+            Отправьте ссылку на ваш товар — я лично разберу дизайн обложки, найду ошибки и покажу точки роста кликабельности
+          </p>
+        </div>
+
+        <!-- Middle: form + benefits side by side -->
+        <div class="cta-section__body">
+          <form class="audit-form cta-section__form" id="auditForm">
+            <div class="audit-form__group">
+              <input type="url" id="auditLink" placeholder="Ссылка на товар (Wildberries / Ozon)..." required class="audit-form__input">
+            </div>
+            <div class="audit-form__group">
+              <input type="text" id="auditContact" placeholder="Ваш Telegram для связи (@username)..." required class="audit-form__input">
+            </div>
+            <button type="submit" class="btn btn-teal audit-form__btn">
+              📊 Отправить на экспресс-аудит
+            </button>
+            <p class="audit-form__disclaimer">🔒 Конфиденциально. Результат в Telegram в течение 2 часов.</p>
+          </form>
+
+          <div class="cta-section__benefits">
+            <div class="cta-benefit">
+              <span class="cta-benefit__icon">🎯</span>
+              <div>
+                <strong>Разбор УТП и Смыслов</strong>
+                <span>Считывает ли покупатель главное преимущество за 3 секунды</span>
+              </div>
+            </div>
+            <div class="cta-benefit">
+              <span class="cta-benefit__icon">👁</span>
+              <div>
+                <strong>Конкурентный анализ</strong>
+                <span>Как ваша обложка выделяется на фоне ТОП-3 в поиске</span>
+              </div>
+            </div>
+            <div class="cta-benefit">
+              <span class="cta-benefit__icon">🛠</span>
+              <div>
+                <strong>Готовый план действий</strong>
+                <span>Конкретные шаги для роста CTR на 30-50%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom: direct contact -->
+        <div class="cta-section__footer">
+          <span class="cta-section__footer-divider">или</span>
+          <div class="cta-section__footer-buttons">
+            <a href="https://t.me/Osip_Design" class="btn btn-secondary" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              Больше работ в моём ТГ
+            </a>
+            <a href="https://t.me/Osip_Designer" class="btn btn-secondary" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              Написать в Telegram
+            </a>
+            <a href="https://vk.com/artandreevich_87" class="btn btn-secondary" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.12-5.339-3.202C4.624 10.857 4 8.57 4 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.253-1.406 2.149-3.574 2.149-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.78 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.744-.576.744z"/></svg>
+              VK
+            </a>
+            <a href="https://max.ru/u/f9LHodD0cOJUew2c3QWtiKkuhQCF3gz7tLp2L6RKCVk3eOXPk7LJKPdXtT4" class="btn btn-secondary" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.29 2.414l8.4 9.273L3.5 21.5h2l3.6-4.3 2.9 4.3h7.5l-8.7-10.8L18.5 2.414h-2l-3.5 4.4L10.4 2.414H3.29z"/></svg>
+              MAX
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__copy">&copy; <span id="currentYear"></span> <span class="footer__brand">ARTEM <span class="accent">OSIPOV</span></span> — Cyber-Conversion</p>
+        <div class="footer__socials">
+          <a href="https://t.me/Osip_Designer" class="footer__social-link" aria-label="Telegram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          </a>
+          <a href="https://vk.com/artandreevich_87" class="footer__social-link" aria-label="VK" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.12-5.339-3.202C4.624 10.857 4 8.57 4 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.253-1.406 2.149-3.574 2.149-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.78 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.744-.576.744z"/></svg>
+          </a>
+          <a href="https://ru.pinterest.com/ArtyomOsipovDesigner/" class="footer__social-link" aria-label="Pinterest" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://dzen.ru/ArtyomOsipovDesigner" class="footer__social-link" aria-label="Дзен" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.583 12.014c-.214-.513-.827-.772-1.484-.772-.316 0-.607.063-.861.188-.435-.926-1.409-1.557-2.531-1.557-.339 0-.663.063-.965.184C13.152 7.747 12.025 6.75 10.679 6.75c-.482 0-.938.137-1.324.378C8.76 5.11 7.044 4 5.053 4c-.316 0-.621.055-.91.158-.316-.684-1.188-1.158-2.143-1.158C.824 2.999.053 3.77.053 4.723c0 .28.072.543.198.775C.065 5.843 0 6.164 0 6.495c0 1.406.805 2.604 1.979 3.224-.12.33-.192.683-.192 1.05 0 2.592 2.916 4.694 6.515 4.694.528 0 1.04-.055 1.534-.159-.173.584-.546 1.089-1.046 1.44 1.154.246 2.379.379 3.639.379 6.627 0 12-4.893 12-10.923 0-.249-.012-.493-.036-.735a6.37 6.37 0 0 0 1.534-4.241c0-.926-.248-1.796-.685-2.548z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <!-- ═══════════ MODAL GALLERY ═══════════ -->
+  <div class="modal-gallery" id="modalGallery">
+    <div class="modal-gallery__backdrop" id="modalBackdrop"></div>
+    <button class="modal-gallery__close" id="modalClose">✕</button>
+    <!-- Scrollable container for horizontal presentation -->
+    <div class="modal-gallery__scroll-container" id="modalScrollContent">
+      <div class="modal-gallery__grid" id="modalGridContent">
+        <!-- Images will be injected here by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="static/js/app.js"></script>
+</body>
+</html>

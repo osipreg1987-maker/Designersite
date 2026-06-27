@@ -1,0 +1,133 @@
+/* ============================================
+   ANIMATIONS — Subtle, professional
+   ============================================ */
+
+/* ─── Smooth reveal (IntersectionObserver) ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s var(--ease-out-expo),
+    transform 0.8s var(--ease-out-expo);
+  will-change: opacity, transform;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal--left  { transform: translateX(-50px); }
+.reveal--right { transform: translateX(50px); }
+.reveal--scale { transform: scale(0.92); }
+.reveal--left.visible,
+.reveal--right.visible { transform: translateX(0); }
+.reveal--scale.visible { transform: scale(1); }
+
+/* ─── Premium Bento Reveal ─── */
+.reveal.reveal--bento {
+  opacity: 0;
+  filter: blur(12px);
+  transform: translateY(80px) scale(0.9) perspective(1000px) rotateX(15deg);
+  transform-origin: center bottom;
+  transition:
+    opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.reveal--bento.visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0) scale(1) perspective(1000px) rotateX(0deg);
+}
+
+/* Stagger delays */
+.reveal-delay-1 { transition-delay: 0.06s; }
+.reveal-delay-2 { transition-delay: 0.12s; }
+.reveal-delay-3 { transition-delay: 0.18s; }
+.reveal-delay-4 { transition-delay: 0.24s; }
+.reveal-delay-5 { transition-delay: 0.30s; }
+.reveal-delay-6 { transition-delay: 0.36s; }
+
+/* ─── Staggered Carousel Reveal ─── */
+.reveal--stagger-children {
+  opacity: 1; /* Wrapper doesn't animate, children do */
+}
+
+.portfolio-slide {
+  opacity: 0;
+  transform: translateY(100px) scale(0.9) perspective(1000px) rotateX(15deg);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal--stagger-children.visible .portfolio-slide {
+  opacity: 1;
+  transform: translateY(0) scale(1) perspective(1000px) rotateX(0deg);
+}
+
+.reveal--stagger-children.visible .portfolio-slide:nth-child(1) { transition-delay: 0.1s; }
+.reveal--stagger-children.visible .portfolio-slide:nth-child(2) { transition-delay: 0.25s; }
+.reveal--stagger-children.visible .portfolio-slide:nth-child(3) { transition-delay: 0.4s; }
+.reveal--stagger-children.visible .portfolio-slide:nth-child(4) { transition-delay: 0.55s; }
+.reveal--stagger-children.visible .portfolio-slide:nth-child(5) { transition-delay: 0.7s; }
+.reveal--stagger-children.visible .portfolio-slide:nth-child(6) { transition-delay: 0.85s; }
+.reveal--stagger-children.visible .portfolio-slide:nth-child(7) { transition-delay: 1.0s; }
+.reveal--stagger-children.visible .portfolio-slide:nth-child(8) { transition-delay: 1.15s; }
+
+/* ─── Non-cyclical Hero Animations ─── */
+
+.reveal-once {
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: opacity, transform;
+}
+
+.reveal-once.animate {
+  animation: heroFadeUp 0.8s var(--ease-out-expo) forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+/* Photo Mask Reveal */
+.mask-reveal {
+  opacity: 0;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  will-change: opacity, clip-path;
+}
+
+.mask-reveal.animate {
+  animation: photoMaskReveal 1.2s var(--ease-out-expo) forwards;
+  animation-delay: var(--delay, 0.2s);
+}
+
+@keyframes photoMaskReveal {
+  0% {
+    opacity: 0;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transform: translateY(40px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ─── Hero entrance (used by reveal-once) ─── */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Scroll hint ─── */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50%      { transform: translateY(8px); opacity: 0.8; }
+}
+
+/* ─── Subtle card hover ─── */
+.card-hover {
+  transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+}
