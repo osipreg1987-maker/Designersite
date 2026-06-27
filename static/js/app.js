@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initProcessTimeline();
   initBeforeAfterSlider();
   initHeroParallax();
-  initUrgencyTimer();
 });
 
 /* ─── Nav glass on scroll ─── */
@@ -709,25 +708,5 @@ function initHeroParallax() {
       ticking = true;
     }
   }, { passive: true });
-}
-
-/* ─── Urgency Timer (rotating slots) ─── */
-function initUrgencyTimer() {
-  const slotsEl = document.getElementById('timerSlots');
-  if (!slotsEl) return;
-
-  const slots = [2, 3, 1, 3, 2];
-  let idx = 0;
-
-  setInterval(() => {
-    idx = (idx + 1) % slots.length;
-    slotsEl.style.opacity = '0';
-    setTimeout(() => {
-      slotsEl.textContent = slots[idx];
-      slotsEl.style.opacity = '1';
-    }, 300);
-  }, 5000);
-
-  slotsEl.style.transition = 'opacity 0.3s ease';
 }
 
