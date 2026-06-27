@@ -256,29 +256,42 @@
   bottom: var(--space-lg);
   right: var(--space-lg);
   z-index: var(--z-nav);
-  width: 56px;
   height: 56px;
-  border-radius: 50%;
+  padding: 0 20px;
+  border-radius: var(--radius-full);
   background: var(--color-teal);
   color: #fff;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   box-shadow: 0 4px 20px rgba(20, 184, 166, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
 }
 
 .sticky-cta:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0 6px 30px rgba(20, 184, 166, 0.6);
 }
 
 .sticky-cta svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
+  .sticky-cta {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
   .sticky-cta {
     display: flex;
   }
