@@ -1104,18 +1104,29 @@
 
 @media (max-width: 1024px) {
   .process-timeline {
-    flex-wrap: wrap;
-    gap: var(--space-xl);
-    justify-content: center;
-    padding: 40px 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: var(--space-md);
+    padding: 40px var(--space-lg);
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
   }
+
+  .process-timeline::-webkit-scrollbar {
+    display: none;
+  }
+
   .process-timeline__line,
   .process-timeline__line--fill {
     display: none;
   }
+
   .process-step {
-    flex: 0 0 calc(33.33% - var(--space-xl));
+    flex: 0 0 70%;
+    scroll-snap-align: center;
+    min-width: 220px;
   }
+
   .process-step__card {
     max-width: 100%;
     height: 200px;
@@ -1124,16 +1135,21 @@
 
 @media (max-width: 640px) {
   .process-step {
-    flex: 0 0 calc(33.33% - var(--space-md));
+    flex: 0 0 70%;
+    scroll-snap-align: center;
+    min-width: 200px;
   }
+
   .process-step__card {
     max-width: 100%;
     height: 180px;
     padding: 24px 16px;
   }
+
   .process-step__title {
     font-size: var(--text-sm);
   }
+
   .process-step__text {
     font-size: 0.65rem;
   }
