@@ -240,44 +240,51 @@ function initPortfolioCarousel() {
   });
 
   // Infinite Scroll Logic
-  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  let autoScrollPaused = false;
+  let pauseTimeout;
 
   const startAutoScroll = () => {
-    if (isTouchDevice) return; // No auto-scroll on mobile
     if (autoScrollAnimation) cancelAnimationFrame(autoScrollAnimation);
     exactScrollLeft = wrapper.scrollLeft;
     
     const scroll = () => {
-      if (isHovering || isDown) {
-        // Sync exact tracker with manual native scroll
+      if (autoScrollPaused || isDown) {
         exactScrollLeft = wrapper.scrollLeft;
       } else {
-        // Auto-scroll movement (0.5 px per frame is a good slow speed)
         exactScrollLeft += 0.5;
         wrapper.scrollLeft = exactScrollLeft;
       }
       
-      // True infinite wrapping
-      // We cloned so it has 4 sets of 4 cards (16 cards). 
-      // Wrap exactly when we reach halfway (which is exactly 2 sets).
       const halfWidth = track.scrollWidth / 2;
       
       if (wrapper.scrollLeft >= halfWidth) {
-        // Wrapped past the middle going right
         exactScrollLeft -= halfWidth;
         wrapper.scrollLeft = exactScrollLeft;
-        if (isDown) dragScrollLeft -= halfWidth; // Sync drag reference
+        if (isDown) dragScrollLeft -= halfWidth;
       } else if (wrapper.scrollLeft <= 0 && isDown) {
-        // Wrapped past the beginning going left while dragging
         exactScrollLeft += halfWidth;
         wrapper.scrollLeft = exactScrollLeft;
-        dragScrollLeft += halfWidth; // Sync drag reference
+        dragScrollLeft += halfWidth;
       }
 
       autoScrollAnimation = requestAnimationFrame(scroll);
     };
     autoScrollAnimation = requestAnimationFrame(scroll);
   };
+
+  // Pause auto-scroll on touch/mouse, resume after 3s
+  const pauseAutoScroll = () => {
+    autoScrollPaused = true;
+    clearTimeout(pauseTimeout);
+    pauseTimeout = setTimeout(() => {
+      autoScrollPaused = false;
+      exactScrollLeft = wrapper.scrollLeft;
+    }, 3000);
+  };
+
+  wrapper.addEventListener('touchstart', pauseAutoScroll, { passive: true });
+  wrapper.addEventListener('mousedown', pauseAutoScroll);
+  wrapper.addEventListener('wheel', pauseAutoScroll, { passive: true });
 
   // Wait for the reveal animation to finish before starting auto-scroll
   const observer = new IntersectionObserver((entries) => {

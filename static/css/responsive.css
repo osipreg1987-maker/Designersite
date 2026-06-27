@@ -154,6 +154,29 @@
     font-size: var(--text-xs);
   }
 
+  /* Portfolio slides — smaller on mobile */
+  .portfolio-slide {
+    width: 160px;
+    height: 240px;
+  }
+
+  .portfolio-slide__info {
+    padding: 60px var(--space-sm) var(--space-sm);
+  }
+
+  .portfolio-slide__info h3 {
+    font-size: var(--text-xs);
+  }
+
+  .portfolio-slide__info p {
+    font-size: 0.6rem;
+  }
+
+  .portfolio-slide__click-hint {
+    font-size: 0.5rem;
+    padding: 2px 8px;
+  }
+
   /* Modal gallery — single column on mobile */
   .modal-gallery__scroll-container {
     overflow-y: auto;
