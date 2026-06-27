@@ -572,43 +572,20 @@ function initAuditForm() {
 
     const linkInput = document.getElementById('auditLink');
     const contactInput = document.getElementById('auditContact');
-    const submitBtn = form.querySelector('.audit-form__btn');
 
     if (!linkInput || !contactInput) return;
 
     const link = linkInput.value;
     const contact = contactInput.value;
 
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '⌛ Отправка данных...';
-    }
+    const message = encodeURIComponent(
+      `📊 Заявка на экспресс-аудит CTR\n\n` +
+      `🔗 Ссылка на товар: ${link}\n` +
+      `👤 Контакт: ${contact}\n\n` +
+      `Жду подробный разбор!`
+    );
 
-    setTimeout(() => {
-      const formColumn = form.closest('.cta-section__form') || form.closest('.cta__form-column');
-      if (formColumn) {
-        formColumn.style.opacity = '0';
-        formColumn.style.transform = 'translateY(10px)';
-        formColumn.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-
-        setTimeout(() => {
-          const hostname = (() => { try { return new URL(link).hostname; } catch { return link; } })();
-          formColumn.innerHTML = `
-            <div class="audit-form-success">
-              <span class="audit-form-success__icon">🚀</span>
-              <h3 class="audit-form-success__title">Заявка принята!</h3>
-              <p class="audit-form-success__text">
-                Данные успешно отправлены Артему.<br>
-                Я уже изучаю вашу карточку: <strong>${hostname}</strong>.<br>
-                Подготовлю подробный разбор и свяжусь с вами в Telegram по адресу <strong>${contact}</strong> в течение 2 часов!
-              </p>
-            </div>
-          `;
-          formColumn.style.opacity = '1';
-          formColumn.style.transform = 'translateY(0)';
-        }, 400);
-      }
-    }, 1200);
+    window.open(`https://t.me/Osip_Designer?text=${message}`, '_blank');
   });
 }
 
