@@ -600,6 +600,8 @@
   color: var(--color-teal);
   text-transform: uppercase;
   letter-spacing: var(--tracking-wider);
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .upsell-card__list {
