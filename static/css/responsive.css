@@ -88,6 +88,36 @@
     flex-direction: column;
   }
 
+  .cta-section__footer-buttons {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .cta-section__footer-buttons .btn {
+    width: 100%;
+    justify-content: center;
+    font-size: var(--text-xs);
+    padding: 10px 16px;
+  }
+
+  .cta-benefit {
+    gap: var(--space-sm);
+  }
+
+  .cta-benefit__icon {
+    font-size: 1.2rem;
+    width: 36px;
+    height: 36px;
+  }
+
+  .cta-benefit strong {
+    font-size: var(--text-sm);
+  }
+
+  .cta-benefit span {
+    font-size: var(--text-xs);
+  }
+
   .upsells-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
