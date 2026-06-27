@@ -260,8 +260,93 @@
   }
 
   .tariffs-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: var(--space-md);
+    padding: var(--space-md) 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tariffs-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tariff-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+    min-width: 260px;
+  }
+
+  .tariff-card__title {
+    font-size: var(--text-base);
+  }
+
+  .tariff-card__price {
+    font-size: var(--text-xl);
+  }
+
+  .tariff-card__features {
+    font-size: 0.65rem;
+  }
+
+  .tariff-card__features li {
+    padding-left: 16px;
+  }
+
+  .tariff-card__features li::before {
+    width: 6px;
+    height: 6px;
+  }
+
+  .testimonials-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: var(--space-md);
+    padding: var(--space-md) 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .testimonials-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonial-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+    min-width: 260px;
+  }
+
+  .testimonial-card__text {
+    font-size: 0.65rem;
+  }
+
+  .upsells-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-sm);
+  }
+
+  .tariffs-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tariff-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+    min-width: 280px;
+  }
+
+  .tariff-card__title {
+    font-size: var(--text-lg);
+  }
+
+  .tariff-card__price {
+    font-size: var(--text-2xl);
+  }
+
+  .tariff-card__features {
+    font-size: var(--text-xs);
   }
 
   .tariff-card {
@@ -290,16 +375,26 @@
   }
 
   .testimonials-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-sm);
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: var(--space-md);
+    padding: var(--space-md) 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .testimonials-grid::-webkit-scrollbar {
+    display: none;
   }
 
   .testimonial-card {
-    padding: var(--space-sm);
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+    min-width: 280px;
   }
 
   .testimonial-card__text {
-    font-size: 0.6rem;
+    font-size: var(--text-xs);
   }
 
   .upsells-grid {
