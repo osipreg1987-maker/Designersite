@@ -89,8 +89,22 @@
   }
 
   .upsells-grid {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     gap: var(--space-md);
+    padding: var(--space-md) 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .upsells-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .upsell-card {
+    flex: 0 0 75%;
+    scroll-snap-align: center;
+    min-width: 220px;
   }
 
   /* Modal gallery — single column on mobile */
@@ -166,14 +180,14 @@
   .hero__video-bg {
     width: 100%;
     height: 100% !important;
-    object-fit: cover !important;
-    object-position: center 20% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
     position: absolute;
     inset: 0;
     z-index: 0;
     opacity: 1 !important;
     mix-blend-mode: normal !important;
-    filter: brightness(0.7);
+    filter: brightness(0.8);
   }
 
   .hero__inner {
