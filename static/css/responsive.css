@@ -278,8 +278,9 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: var(--space-md);
-    padding: var(--space-md) 0;
+    padding: var(--space-md) var(--space-lg);
     -webkit-overflow-scrolling: touch;
+    scroll-padding-left: var(--space-lg);
   }
 
   .tariffs-grid::-webkit-scrollbar {
@@ -287,9 +288,9 @@
   }
 
   .tariff-card {
-    flex: 0 0 85%;
+    flex: 0 0 70%;
     scroll-snap-align: center;
-    min-width: 260px;
+    min-width: 240px;
   }
 
   .tariff-card__title {
@@ -341,9 +342,9 @@
   }
 
   .tariff-card {
-    flex: 0 0 85%;
+    flex: 0 0 70%;
     scroll-snap-align: center;
-    min-width: 280px;
+    min-width: 260px;
   }
 
   .tariff-card__title {
