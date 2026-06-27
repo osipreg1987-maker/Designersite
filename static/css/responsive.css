@@ -336,11 +336,6 @@
     font-size: 0.65rem;
   }
 
-  .upsells-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-sm);
-  }
-
   .tariffs-grid::-webkit-scrollbar {
     display: none;
   }
@@ -409,10 +404,5 @@
 
   .testimonial-card__text {
     font-size: var(--text-xs);
-  }
-
-  .upsells-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-sm);
   }
 }
