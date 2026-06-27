@@ -599,6 +599,27 @@
   margin: 0;
 }
 
+.portfolio-slide__click-hint {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.portfolio-slide:hover .portfolio-slide__click-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ─────────── MODAL GALLERY (2-Column Grid + Zoom) ─────────── */
 .modal-gallery {
   position: fixed;

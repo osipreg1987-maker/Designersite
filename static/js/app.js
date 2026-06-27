@@ -222,12 +222,20 @@ function initPortfolioCarousel() {
 
   // Re-attach click listeners to ALL slides (including clones)
   document.querySelectorAll('.portfolio-slide').forEach(slide => {
+    // Add click hint indicator
+    if (!slide.querySelector('.portfolio-slide__click-hint')) {
+      const hint = document.createElement('span');
+      hint.className = 'portfolio-slide__click-hint';
+      hint.textContent = 'Нажми чтобы посмотреть';
+      slide.appendChild(hint);
+    }
+
     slide.addEventListener('click', (e) => {
       if (isDragging) {
         e.preventDefault();
         return;
       }
-      if (window.openModal) window.openModal(slide.dataset.case); 
+      if (window.openModal) window.openModal(slide.dataset.case);
     });
   });
 

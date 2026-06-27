@@ -227,6 +227,19 @@
   margin: 0 auto;
 }
 
+.section-header__hint {
+  font-size: var(--text-sm);
+  color: var(--color-teal);
+  opacity: 0.7;
+  margin-top: var(--space-sm);
+  animation: hintPulse 2s ease-in-out infinite;
+}
+
+@keyframes hintPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
 /* ─────────── BADGE ─────────── */
 .badge {
   display: inline-flex;
