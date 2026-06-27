@@ -285,15 +285,63 @@
 }
 
 /* ─────────── BEFORE / AFTER SLIDER ─────────── */
+.ba-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.ba-row__title {
+  font-size: var(--text-3xl);
+  margin: var(--space-md) 0;
+}
+
+.ba-row__subtitle {
+  color: var(--color-text-on-dark-muted);
+  margin-bottom: var(--space-xl);
+}
+
+.ba-row__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-2xl) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.ba-row__list li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--color-text-on-dark-muted);
+  font-size: var(--text-base);
+}
+
+.ba-row__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-teal);
+}
+
+.ba-row__slider {
+  width: 100%;
+}
+
 .ba-slider {
   position: relative;
-  max-width: 800px;
-  margin: 0 auto;
   border-radius: var(--radius-xl);
   overflow: hidden;
   cursor: ew-resize;
   user-select: none;
-  aspect-ratio: 16/10;
+  aspect-ratio: 4/5;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .ba-slider__before,

@@ -371,30 +371,40 @@
   <!-- ═══════════ BEFORE / AFTER ═══════════ -->
   <section class="section" id="before-after" style="background: var(--color-bg-section);">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-header__label">Результат</span>
-        <h2 class="section-header__title">
-          <span class="text-muted-heading">До и</span>
-          <span class="gradient-text">после</span>
-        </h2>
-        <p class="section-header__subtitle">Видна ли разница? Судите сами</p>
-      </div>
-
-      <div class="ba-slider reveal" id="baSlider">
-        <div class="ba-slider__before">
-          <img src="static/img/before.jpg" alt="До" loading="lazy">
-          <span class="ba-slider__label ba-slider__label--before">До</span>
+      <div class="ba-row reveal">
+        <div class="ba-row__text">
+          <span class="section-header__label">Результат</span>
+          <h2 class="ba-row__title">
+            <span class="text-muted-heading">До и</span>
+            <span class="gradient-text">после</span>
+          </h2>
+          <p class="ba-row__subtitle">Видна ли разница? Судите сами</p>
+          <ul class="ba-row__list">
+            <li>Увеличение CTR на 40–95%</li>
+            <li>Рост конверсии в корзину</li>
+            <li>Выделение среди конкурентов</li>
+            <li>Профессиональная подача товара</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Хочу так же</a>
         </div>
-        <div class="ba-slider__after">
-          <img src="static/img/after.jpg" alt="После" loading="lazy">
-          <span class="ba-slider__label ba-slider__label--after">После</span>
-        </div>
-        <div class="ba-slider__handle">
-          <div class="ba-slider__handle-line"></div>
-          <div class="ba-slider__handle-circle">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 4l-6 8 6 8M16 4l6 8-6 8"/></svg>
+        <div class="ba-row__slider">
+          <div class="ba-slider" id="baSlider">
+            <div class="ba-slider__before">
+              <img src="static/img/before.jpg" alt="До" loading="lazy">
+              <span class="ba-slider__label ba-slider__label--before">До</span>
+            </div>
+            <div class="ba-slider__after">
+              <img src="static/img/after.jpg" alt="После" loading="lazy">
+              <span class="ba-slider__label ba-slider__label--after">После</span>
+            </div>
+            <div class="ba-slider__handle">
+              <div class="ba-slider__handle-line"></div>
+              <div class="ba-slider__handle-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 4l-6 8 6 8M16 4l6 8-6 8"/></svg>
+              </div>
+              <div class="ba-slider__handle-line"></div>
+            </div>
           </div>
-          <div class="ba-slider__handle-line"></div>
         </div>
       </div>
     </div>

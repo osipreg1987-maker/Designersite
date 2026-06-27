@@ -10,6 +10,7 @@
   .hero__stats { gap: var(--space-2xl); }
   .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
   .advantages-grid { grid-template-columns: repeat(2, 1fr); }
+  .ba-row { gap: var(--space-2xl); }
 }
 
 @media (max-width: 768px) {
@@ -41,6 +42,20 @@
 
   .advantages-grid {
     grid-template-columns: 1fr;
+  }
+
+  .ba-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .ba-row__slider {
+    order: -1;
+  }
+
+  .ba-slider {
+    aspect-ratio: 4/5;
+    max-height: 400px;
   }
 
   .cta-section__body {
