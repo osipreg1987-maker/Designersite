@@ -223,6 +223,12 @@
     margin-bottom: var(--space-sm);
   }
 
+  .hero__badge .badge {
+    font-size: 0.6rem;
+    padding: 4px 10px;
+    opacity: 0.7;
+  }
+
   .hero__actions { flex-direction: row; flex-wrap: wrap; gap: var(--space-sm); }
   .hero__actions .btn { font-size: var(--text-xs); padding: 10px 20px; }
 
