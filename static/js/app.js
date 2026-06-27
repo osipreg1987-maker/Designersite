@@ -390,6 +390,30 @@ function initModalGallery() {
       { src: '../static/images/Keis9/4.png', cap: 'А/Б Тест (Вариант 4): Вариант с лаконичным перечислением ключевых характеристик устройства.' },
       { src: '../static/images/Keis9/5.png', cap: 'А/Б Тест (Вариант 5): Слайд-преимущество «Снимай как на iPhone без рук» — закрытие боли блогинга.' },
       { src: '../static/images/Keis9/6.png', cap: 'А/Б Тест (Вариант 6): Финальная обложка с оптимизированным расположением ИИ-бейджей.' }
+    ],
+    'case10': [
+      { src: '../static/images/Keis10/1.png', cap: 'Обложка: Полная упаковка карточки товара с инфографикой.' },
+      { src: '../static/images/Keis10/2.png', cap: 'Слайд 2: Детали и преимущества товара.' },
+      { src: '../static/images/Keis10/3.png', cap: 'Слайд 3: Технические характеристики.' },
+      { src: '../static/images/Keis10/4.png', cap: 'Слайд 4: Комплектация и состав.' },
+      { src: '../static/images/Keis10/5.png', cap: 'Слайд 5: Преимущества и выгоды.' },
+      { src: '../static/images/Keis10/6.png', cap: 'Слайд 6: Применение и сценарии использования.' },
+      { src: '../static/images/Keis10/7.png', cap: 'Слайд 7: Качество и безопасность.' },
+      { src: '../static/images/Keis10/8.png', cap: 'Слайд 8: Размеры и габариты.' },
+      { src: '../static/images/Keis10/9.png', cap: 'Слайд 9: Отзывы и рекомендации.' },
+      { src: '../static/images/Keis10/10.png', cap: 'Слайд 10: Гарантия и обслуживание.' },
+      { src: '../static/images/Keis10/11.png', cap: 'Слайд 11: Итоговый slide.' },
+      { src: '../static/images/Keis10/12.png', cap: 'Слайд 12: Финальная обложка.' }
+    ],
+    'case11': [
+      { src: '../static/images/keis11/1.png', cap: 'Обложка: Редизайн карточки товара с фокусом на конверсию.' },
+      { src: '../static/images/keis11/2.png', cap: 'Слайд 2: Ключевые преимущества продукта.' },
+      { src: '../static/images/keis11/3.png', cap: 'Слайд 3: Технические детали.' },
+      { src: '../static/images/keis11/4.png', cap: 'Слайд 4: Комплектация набора.' },
+      { src: '../static/images/keis11/5.png', cap: 'Слайд 5: Область применения.' },
+      { src: '../static/images/keis11/6.png', cap: 'Слайд 6: Преимущества перед конкурентами.' },
+      { src: '../static/images/keis11/7.png', cap: 'Слайд 7: Инструкция по использованию.' },
+      { src: '../static/images/keis11/8.png', cap: 'Слайд 8: Гарантия и поддержка.' }
     ]
   };
 
