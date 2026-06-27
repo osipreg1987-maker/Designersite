@@ -390,12 +390,13 @@
 
 .tariff-card__price-old {
   font-family: var(--font-display);
-  font-size: var(--text-lg);
-  font-weight: 700;
+  font-size: var(--text-sm);
+  font-weight: 600;
   color: var(--color-text-on-dark-muted);
   text-decoration: line-through;
-  opacity: 0.6;
+  opacity: 0.5;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .tariff-card--hit .tariff-card__price {
