@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initFAQ();
   initDynamicYear();
   initProcessTimeline();
+  initBeforeAfterSlider();
+  initHeroParallax();
 });
 
 /* ─── Nav glass on scroll ─── */
@@ -635,5 +637,67 @@ function initProcessTimeline() {
     { threshold: 0.3 }
   );
   observer.observe(timeline);
+}
+
+/* ─── Before/After Slider ─── */
+function initBeforeAfterSlider() {
+  const slider = document.getElementById('baSlider');
+  if (!slider) return;
+
+  const afterEl = slider.querySelector('.ba-slider__after');
+  const handle = slider.querySelector('.ba-slider__handle');
+  let isDragging = false;
+
+  function setPosition(x) {
+    const rect = slider.getBoundingClientRect();
+    let pct = ((x - rect.left) / rect.width) * 100;
+    pct = Math.max(2, Math.min(98, pct));
+    afterEl.style.clipPath = `inset(0 0 0 ${pct}%)`;
+    handle.style.left = `${pct}%`;
+  }
+
+  slider.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    setPosition(e.clientX);
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    setPosition(e.clientX);
+  });
+
+  window.addEventListener('mouseup', () => { isDragging = false; });
+
+  slider.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    setPosition(e.touches[0].clientX);
+  }, { passive: true });
+
+  slider.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    setPosition(e.touches[0].clientX);
+  }, { passive: true });
+
+  slider.addEventListener('touchend', () => { isDragging = false; });
+}
+
+/* ─── Hero Video Parallax ─── */
+function initHeroParallax() {
+  const videos = document.querySelectorAll('.hero__video-bg');
+  if (!videos.length) return;
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        const offset = scrollY * 0.15;
+        videos.forEach(v => { v.style.transform = `translateY(${offset}px)`; });
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
 }
 

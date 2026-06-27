@@ -24,6 +24,7 @@
   --color-bg-white: #FFFFFF;
   --color-bg-card-dark: rgba(255, 255, 255, 0.04);
   --color-bg-card-light: #FFFFFF;
+  --color-bg-section: rgba(255, 255, 255, 0.015);
 
   /* ─────────── TEXT ─────────── */
   --color-text-on-dark: #F1F5F9;

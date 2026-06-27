@@ -23,13 +23,16 @@
 
 .hero__video-bg {
   width: 100%;
-  height: 100%;
+  height: 120%;
   object-fit: cover;
-  object-position: center 0; /* Прижато к верхнему краю, чтобы голова была полностью видна */
+  object-position: center 0;
   position: absolute;
-  inset: 0;
+  left: 0;
+  top: -10%;
   z-index: -1;
-  mix-blend-mode: screen; /* Опционально: красивое смешивание с фоном */
+  mix-blend-mode: screen;
+  will-change: transform;
+  transition: transform 0.1s linear;
 }
 
 .hero__inner {
@@ -192,6 +195,187 @@
 .hero__scroll-hint svg {
   width: 18px; height: 18px;
   stroke: var(--color-text-on-dark-dim);
+}
+
+/* ─────────── MARQUEE ─────────── */
+.marquee {
+  overflow: hidden;
+  padding: var(--space-lg) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 30s linear infinite;
+}
+
+.marquee__content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  padding-right: var(--space-xl);
+  flex-shrink: 0;
+}
+
+.marquee__item {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-text-on-dark-muted);
+  white-space: nowrap;
+  opacity: 0.5;
+  letter-spacing: var(--tracking-wide);
+  transition: opacity 0.3s ease;
+}
+
+.marquee:hover .marquee__item {
+  opacity: 0.3;
+}
+
+.marquee__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-teal);
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ─────────── STICKY CTA (mobile) ─────────── */
+.sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: var(--space-lg);
+  right: var(--space-lg);
+  z-index: var(--z-nav);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-teal);
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(20, 184, 166, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.sticky-cta:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(20, 184, 166, 0.6);
+}
+
+.sticky-cta svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 768px) {
+  .sticky-cta {
+    display: flex;
+  }
+}
+
+/* ─────────── BEFORE / AFTER SLIDER ─────────── */
+.ba-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  cursor: ew-resize;
+  user-select: none;
+  aspect-ratio: 16/10;
+}
+
+.ba-slider__before,
+.ba-slider__after {
+  position: absolute;
+  inset: 0;
+}
+
+.ba-slider__before img,
+.ba-slider__after img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ba-slider__after {
+  clip-path: inset(0 0 0 50%);
+}
+
+.ba-slider__label {
+  position: absolute;
+  bottom: var(--space-lg);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.ba-slider__label--before {
+  left: var(--space-lg);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+.ba-slider__label--after {
+  right: var(--space-lg);
+  background: rgba(20, 184, 166, 0.8);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+.ba-slider__handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.ba-slider__handle-line {
+  flex: 1;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.ba-slider__handle-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-teal);
+  border: 3px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  flex-shrink: 0;
+}
+
+.ba-slider__handle-circle svg {
+  width: 20px;
+  height: 20px;
+  color: #fff;
 }
 
 /* ─────────── GRID ─────────── */
