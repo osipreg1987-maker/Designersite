@@ -243,22 +243,20 @@
 
   .hero__bg {
     position: relative;
-    z-index: 0;
-    background: none !important;
-    height: 55vh;
+    width: 100%;
+    height: 60vh;
     overflow: hidden;
+    background: var(--color-bg-dark);
   }
 
   .hero__video-bg {
     width: 100%;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center 20% !important;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
     position: absolute;
-    inset: 0;
-    z-index: 0;
-    opacity: 1 !important;
-    mix-blend-mode: normal !important;
+    top: 0;
+    left: 0;
   }
 
   .hero__inner {
