@@ -89,22 +89,25 @@
   }
 
   .upsells-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: var(--space-md);
-    padding: var(--space-md) 0;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .upsells-grid::-webkit-scrollbar {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
   }
 
   .upsell-card {
-    flex: 0 0 75%;
-    scroll-snap-align: center;
-    min-width: 220px;
+    padding: var(--space-sm);
+  }
+
+  .upsell-card__list {
+    font-size: 0.6rem;
+  }
+
+  .upsell-card {
+    padding: var(--space-md);
+  }
+
+  .upsell-card__list {
+    font-size: var(--text-xs);
   }
 
   /* Modal gallery — single column on mobile */
