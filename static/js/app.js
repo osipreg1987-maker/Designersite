@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProcessTimeline();
   initBeforeAfterSlider();
   initHeroParallax();
+  initUrgencyTimer();
 });
 
 /* ─── Nav glass on scroll ─── */
@@ -400,28 +401,28 @@ function initModalGallery() {
       { src: 'static/images/Keis9/6.png', cap: 'А/Б Тест (Вариант 6): Финальная обложка с оптимизированным расположением ИИ-бейджей.' }
     ],
     'case10': [
-      { src: 'static/images/Keis10/1.png', cap: 'Обложка: Полная упаковка карточки товара с инфографикой.' },
-      { src: 'static/images/Keis10/2.png', cap: 'Слайд 2: Детали и преимущества товара.' },
-      { src: 'static/images/Keis10/3.png', cap: 'Слайд 3: Технические характеристики.' },
-      { src: 'static/images/Keis10/4.png', cap: 'Слайд 4: Комплектация и состав.' },
-      { src: 'static/images/Keis10/5.png', cap: 'Слайд 5: Преимущества и выгоды.' },
-      { src: 'static/images/Keis10/6.png', cap: 'Слайд 6: Применение и сценарии использования.' },
-      { src: 'static/images/Keis10/7.png', cap: 'Слайд 7: Качество и безопасность.' },
-      { src: 'static/images/Keis10/8.png', cap: 'Слайд 8: Размеры и габариты.' },
-      { src: 'static/images/Keis10/9.png', cap: 'Слайд 9: Отзывы и рекомендации.' },
-      { src: 'static/images/Keis10/10.png', cap: 'Слайд 10: Гарантия и обслуживание.' },
-      { src: 'static/images/Keis10/11.png', cap: 'Слайд 11: Итоговый slide.' },
-      { src: 'static/images/Keis10/12.png', cap: 'Слайд 12: Финальная обложка.' }
+      { src: 'static/images/Keis10/1.png', cap: 'Обложка: Премиальный дизайн карточки смарт-очков с выносом ключевых УТП.' },
+      { src: 'static/images/Keis10/2.png', cap: 'Функции: Детальный разбор возможностей устройства — звонки, музыка, спорт.' },
+      { src: 'static/images/Keis10/3.png', cap: 'Дизайн: Акцент на стили и удобстве носки в повседневной жизни.' },
+      { src: 'static/images/Keis10/4.png', cap: 'Звук: Инфографика качества звука и шумоподавления микрофонов.' },
+      { src: 'static/images/Keis10/5.png', cap: 'Спорт: Презентация водозащиты и датчиков для тренировок.' },
+      { src: 'static/images/Keis10/6.png', cap: 'Автономность: Время работы от аккумулятора и быстрая зарядка.' },
+      { src: 'static/images/Keis10/7.png', cap: 'Совместимость: Поддержка iOS и Android, управление жестами.' },
+      { src: 'static/images/Keis10/8.png', cap: 'Размеры: Габариты и вес для оценки удобства использования.' },
+      { src: 'static/images/Keis10/9.png', cap: 'Комплектация: Полный набор — очки, чехол, кабель, документация.' },
+      { src: 'static/images/Keis10/10.png', cap: 'Преимущества: Сравнение с конкурентами и ключевые отличия.' },
+      { src: 'static/images/Keis10/11.png', cap: 'Отзывы: Реальные рекомендации покупателей на маркетплейсе.' },
+      { src: 'static/images/Keis10/12.png', cap: 'Финальная обложка: Оптимизированный дизайн для максимального CTR.' }
     ],
     'case11': [
-      { src: 'static/images/keis11/1.png', cap: 'Обложка: Редизайн карточки товара с фокусом на конверсию.' },
-      { src: 'static/images/keis11/2.png', cap: 'Слайд 2: Ключевые преимущества продукта.' },
-      { src: 'static/images/keis11/3.png', cap: 'Слайд 3: Технические детали.' },
-      { src: 'static/images/keis11/4.png', cap: 'Слайд 4: Комплектация набора.' },
-      { src: 'static/images/keis11/5.png', cap: 'Слайд 5: Область применения.' },
-      { src: 'static/images/keis11/6.png', cap: 'Слайд 6: Преимущества перед конкурентами.' },
-      { src: 'static/images/keis11/7.png', cap: 'Слайд 7: Инструкция по использованию.' },
-      { src: 'static/images/keis11/8.png', cap: 'Слайд 8: Гарантия и поддержка.' }
+      { src: 'static/images/keis11/1.png', cap: 'Обложка: Яркая презентация вакуумной присоски с акцентом на прочность.' },
+      { src: 'static/images/keis11/2.png', cap: 'Применение: Показ вариантов использования — ванна, кухня, стекло.' },
+      { src: 'static/images/keis11/3.png', cap: 'Крепление: Инфографика системы установки без сверления и клея.' },
+      { src: 'static/images/keis11/4.png', cap: 'Нагрузка: Демонстрация выносливости — до 15 кг на одну присоску.' },
+      { src: 'static/images/keis11/5.png', cap: 'Материал: Разбор компонентов — силикон, нержавеющая сталь, ABS-пластик.' },
+      { src: 'static/images/keis11/6.png', cap: 'Комплектация: Набор из 4/6/8 присосок с разными типами крючков.' },
+      { src: 'static/images/keis11/7.png', cap: 'Сравнение: Преимущества перед клеевыми и винтовыми аналогами.' },
+      { src: 'static/images/keis11/8.png', cap: 'Гарантия: Условия возврата и служба поддержки.' }
     ]
   };
 
@@ -708,5 +709,25 @@ function initHeroParallax() {
       ticking = true;
     }
   }, { passive: true });
+}
+
+/* ─── Urgency Timer (rotating slots) ─── */
+function initUrgencyTimer() {
+  const slotsEl = document.getElementById('timerSlots');
+  if (!slotsEl) return;
+
+  const slots = [2, 3, 1, 3, 2];
+  let idx = 0;
+
+  setInterval(() => {
+    idx = (idx + 1) % slots.length;
+    slotsEl.style.opacity = '0';
+    setTimeout(() => {
+      slotsEl.textContent = slots[idx];
+      slotsEl.style.opacity = '1';
+    }, 300);
+  }, 5000);
+
+  slotsEl.style.transition = 'opacity 0.3s ease';
 }
 

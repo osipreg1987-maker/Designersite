@@ -1296,6 +1296,34 @@
   margin-bottom: var(--space-3xl);
 }
 
+/* ─── Urgency Timer ─── */
+.urgency-timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(251, 113, 133, 0.1);
+  border: 1px solid rgba(251, 113, 133, 0.3);
+  border-radius: var(--radius-full);
+  padding: 8px 20px;
+  margin-bottom: var(--space-lg);
+  animation: urgencyPulse 2s ease-in-out infinite;
+}
+
+.urgency-timer__icon {
+  font-size: 1.1rem;
+}
+
+.urgency-timer__text {
+  font-size: var(--text-sm);
+  color: #fb7185;
+  font-weight: 600;
+}
+
+@keyframes urgencyPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(251, 113, 133, 0.2); }
+  50% { box-shadow: 0 0 0 8px rgba(251, 113, 133, 0); }
+}
+
 .cta-section__title {
   display: flex;
   flex-direction: column;
