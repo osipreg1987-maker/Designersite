@@ -291,12 +291,6 @@
   }
 }
 
-@media (min-width: 769px) {
-  .sticky-cta {
-    display: flex;
-  }
-}
-
 /* ─────────── BEFORE / AFTER SLIDER ─────────── */
 .ba-row {
   display: grid;

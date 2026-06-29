@@ -706,6 +706,9 @@ function initHeroParallax() {
   const videos = document.querySelectorAll('.hero__video-bg');
   if (!videos.length) return;
 
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  if (isMobile) return;
+
   let ticking = false;
   window.addEventListener('scroll', () => {
     if (!ticking) {

@@ -47,20 +47,26 @@
   }
 
   .grid--2, .grid--3, .grid--2-1, .tariffs-grid, .cta__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .tariffs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
   }
 
   .testimonials-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .advantages-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-md);
   }
 
   .advantage-card__illustration {
-    height: 70px;
+    height: 100px;
   }
 
   .advantage-card {
@@ -134,16 +140,8 @@
 
   .upsells-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-sm);
-  }
-
-  .upsell-card {
-    padding: var(--space-sm);
-  }
-
-  .upsell-card__list {
-    font-size: 0.6rem;
   }
 
   .upsell-card {
@@ -156,12 +154,12 @@
 
   /* Portfolio slides — smaller on mobile */
   .portfolio-slide {
-    width: 160px;
-    height: 240px;
+    width: 200px;
+    height: 300px;
   }
 
   .portfolio-slide__info {
-    padding: 60px var(--space-sm) var(--space-sm);
+    padding: 80px var(--space-sm) var(--space-sm);
   }
 
   .portfolio-slide__info h3 {
@@ -169,7 +167,7 @@
   }
 
   .portfolio-slide__info p {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
   }
 
   .portfolio-slide__click-hint {
@@ -325,15 +323,29 @@
   .timeline__dot { left: calc(-1 * var(--space-2xl) + 5px); }
 
   .cta__box { padding: var(--space-2xl); }
+
+  .section-header__subtitle {
+    font-size: var(--text-sm);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .modal-zoom-overlay__close-hint {
+    top: 12px;
+    right: 12px;
+    font-size: 0.55rem;
+  }
 }
 
 @media (max-width: 480px) {
   .container { padding: 0 var(--space-md); }
   .card { padding: var(--space-lg); }
-  .btn { padding: 12px 24px; font-size: var(--text-xs); }
+  .btn { padding: 10px 18px; font-size: var(--text-xs); }
 
   .advantages-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: var(--space-sm);
   }
 
@@ -342,7 +354,7 @@
   }
 
   .advantage-card__illustration {
-    height: 50px;
+    height: 80px;
   }
 
   .advantage-card__title {
@@ -350,7 +362,7 @@
   }
 
   .advantage-card__text {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
   }
 
   .tariffs-grid {
@@ -371,6 +383,7 @@
     flex: 0 0 70%;
     scroll-snap-align: center;
     min-width: 240px;
+    padding: var(--space-md);
   }
 
   .tariff-card__title {
@@ -417,73 +430,74 @@
     font-size: 0.65rem;
   }
 
-  .tariffs-grid::-webkit-scrollbar {
-    display: none;
+  .cta-section__inner {
+    padding: var(--space-xl) var(--space-md);
   }
 
-  .tariff-card {
-    flex: 0 0 70%;
-    scroll-snap-align: center;
-    min-width: 260px;
+  .cta-section__title .text-muted-heading {
+    font-size: var(--text-xl);
   }
 
-  .tariff-card__title {
-    font-size: var(--text-lg);
+  .cta-section__subtitle {
+    font-size: var(--text-sm);
   }
 
-  .tariff-card__price {
-    font-size: var(--text-2xl);
+  .hero {
+    padding-top: var(--nav-height);
   }
 
-  .tariff-card__features {
-    font-size: var(--text-xs);
+  .hero__bg {
+    height: 35vh;
   }
 
-  .tariff-card {
-    padding: var(--space-sm);
+  .hero__content {
+    padding: var(--space-lg) var(--space-md);
   }
 
-  .tariff-card__title {
+  .hero__title {
+    font-size: clamp(1.1rem, 0.8rem + 2vw, 1.5rem);
+  }
+
+  .hero__stats {
+    gap: var(--space-sm);
+    padding-top: var(--space-md);
+  }
+
+  .hero__stats .stat__number {
     font-size: var(--text-base);
   }
 
-  .tariff-card__price {
-    font-size: var(--text-lg);
+  .hero__stats .stat__label {
+    font-size: 0.55rem;
   }
 
-  .tariff-card__features {
-    font-size: 0.6rem;
+  .hero__actions .btn {
+    padding: 8px 14px;
+    font-size: 0.65rem;
   }
 
-  .tariff-card__features li {
-    padding-left: 16px;
+  .portfolio-slide {
+    width: 160px;
+    height: 240px;
   }
 
-  .tariff-card__features li::before {
-    width: 6px;
-    height: 6px;
+  .footer__socials {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .testimonials-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: var(--space-md);
-    padding: var(--space-md) 0;
-    -webkit-overflow-scrolling: touch;
+  .faq-item__question {
+    padding: var(--space-md) var(--space-lg);
+    font-size: var(--text-sm);
   }
 
-  .testimonials-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  .testimonial-card {
-    flex: 0 0 85%;
-    scroll-snap-align: center;
-    min-width: 280px;
-  }
-
-  .testimonial-card__text {
+  .faq-item__answer p {
+    padding: 0 var(--space-lg) var(--space-md);
     font-size: var(--text-xs);
+  }
+
+  .modal-zoom-overlay__img {
+    max-width: 95vw;
+    max-height: 80vh;
   }
 }
