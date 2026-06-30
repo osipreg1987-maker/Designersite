@@ -23,19 +23,20 @@
     position: fixed;
     top: var(--nav-height);
     left: 0; right: 0; bottom: 0;
-    background: rgba(10, 14, 26, 0.98);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    padding: var(--space-3xl) var(--space-2xl);
-    gap: var(--space-xl);
+    background: linear-gradient(180deg, rgba(12, 18, 32, 0.82) 0%, rgba(10, 14, 26, 0.94) 100%) !important;
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 10vh var(--space-2xl) var(--space-3xl);
+    gap: var(--space-lg);
     z-index: var(--z-overlay);
     align-items: center;
-    justify-content: center;
-    animation: menuFadeIn 0.3s ease;
+    justify-content: flex-start; /* Shift menu list lower */
+    animation: menuFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   @keyframes menuFadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
+    from { opacity: 0; transform: translateY(-15px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
@@ -43,7 +44,59 @@
     font-size: var(--text-xl);
     font-weight: 600;
     color: var(--color-text-on-dark);
-    padding: var(--space-sm) 0;
+    padding: var(--space-xs) 0;
+    letter-spacing: var(--tracking-wide);
+    transition: color 0.3s ease;
+  }
+
+  /* Animated Hamburger to X */
+  .nav__hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .nav__hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav__hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Mobile contacts inside menu overlay */
+  .nav__mobile-contacts-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: var(--space-2xl);
+    width: 100%;
+    max-width: 280px;
+    gap: var(--space-md);
+  }
+
+  .nav__mobile-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.1) 80%, transparent);
+    margin-bottom: var(--space-md);
+  }
+
+  .nav__mobile-contacts-title {
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    color: var(--color-text-on-dark-dim);
+    margin-bottom: var(--space-xs);
+  }
+
+  .nav__mobile-contacts-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav__mobile-contacts-btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px var(--space-xl);
+    font-size: var(--text-sm);
   }
 
   .grid--2, .grid--3, .grid--2-1, .tariffs-grid, .cta__grid {
@@ -65,21 +118,38 @@
     gap: var(--space-md);
   }
 
+  /* Hide illustrations on mobile to keep cards compact and prevent text squishing */
   .advantage-card__illustration {
-    height: 100px;
+    display: none !important;
   }
 
   .advantage-card {
-    padding: var(--space-md);
+    padding: 14px 12px;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+    border-radius: var(--radius-lg);
+    background: rgba(15, 23, 42, 0.35) !important;
+    border-color: rgba(255, 255, 255, 0.04) !important;
+  }
+
+  .advantage-card__icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+    margin-bottom: 0;
   }
 
   .advantage-card__title {
-    font-size: var(--text-sm);
+    font-size: 0.75rem;
+    line-height: 1.2;
   }
 
   .advantage-card__text {
-    font-size: 0.7rem;
-    line-height: 1.4;
+    font-size: 0.6rem;
+    line-height: 1.35;
   }
 
   .ba-row {
@@ -345,24 +415,21 @@
   .btn { padding: 10px 18px; font-size: var(--text-xs); }
 
   .advantages-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-sm);
+    grid-template-columns: repeat(2, 1fr); /* 2 columns even on small mobile screen */
+    gap: var(--space-xs);
   }
 
   .advantage-card {
-    padding: var(--space-sm);
-  }
-
-  .advantage-card__illustration {
-    height: 80px;
+    padding: 10px 8px;
+    min-height: 145px;
   }
 
   .advantage-card__title {
-    font-size: var(--text-xs);
+    font-size: 0.7rem;
   }
 
   .advantage-card__text {
-    font-size: 0.65rem;
+    font-size: 0.58rem;
   }
 
   .tariffs-grid {

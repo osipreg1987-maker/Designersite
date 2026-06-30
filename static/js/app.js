@@ -46,10 +46,14 @@ function initHamburger() {
 
   btn.addEventListener('click', () => {
     links.classList.toggle('open');
+    btn.classList.toggle('active');
   });
 
   links.querySelectorAll('.nav__link').forEach(link => {
-    link.addEventListener('click', () => links.classList.remove('open'));
+    link.addEventListener('click', () => {
+      links.classList.remove('open');
+      btn.classList.remove('active');
+    });
   });
 }
 

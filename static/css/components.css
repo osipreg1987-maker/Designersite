@@ -149,6 +149,10 @@
   list-style: none;
 }
 
+.nav__mobile-contacts-wrapper {
+  display: none;
+}
+
 .nav__link {
   font-size: var(--text-sm);
   color: var(--color-text-on-dark-muted);
