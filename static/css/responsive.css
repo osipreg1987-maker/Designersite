@@ -17,6 +17,15 @@
   .nav__links { display: none; }
   .nav__hamburger { display: flex; }
 
+  /* Stretch parent nav on menu-open and clear its own styles */
+  .nav.menu-open {
+    height: 100vh !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: transparent !important;
+    border-bottom: none !important;
+  }
+
   .nav__links.open {
     display: flex;
     flex-direction: column;

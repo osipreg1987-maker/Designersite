@@ -42,17 +42,20 @@ function initNavScroll() {
 function initHamburger() {
   const btn = document.getElementById('hamburger');
   const links = document.getElementById('navLinks');
-  if (!btn || !links) return;
+  const nav = document.getElementById('nav');
+  if (!btn || !links || !nav) return;
 
   btn.addEventListener('click', () => {
     links.classList.toggle('open');
     btn.classList.toggle('active');
+    nav.classList.toggle('menu-open');
   });
 
   links.querySelectorAll('.nav__link').forEach(link => {
     link.addEventListener('click', () => {
       links.classList.remove('open');
       btn.classList.remove('active');
+      nav.classList.remove('menu-open');
     });
   });
 }
